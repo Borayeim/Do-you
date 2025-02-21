@@ -16,6 +16,27 @@
             <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
         </div>
     </div>
+     <script>
+      function goToYesPage() {
+        window.location.href = "yes.html";
+      }
+
+      function moveButton() {
+        const noButton = document.getElementById("noButton");
+        const container = document.querySelector(".container");
+        const containerRect = container.getBoundingClientRect();
+        const buttonRect = noButton.getBoundingClientRect();
+
+        const newTop =
+          Math.random() * (containerRect.height - buttonRect.height);
+        const newLeft =
+          Math.random() * (containerRect.width - buttonRect.width);
+
+        noButton.style.position = "absolute";
+        noButton.style.top = `${newTop}px`;
+        noButton.style.left = `${newLeft}px`;
+      }
+    </script>
 
     <script src="script.js"></script> 
 </body>
