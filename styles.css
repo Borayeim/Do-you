@@ -99,3 +99,25 @@ body {
     background-color: #ff6b81;
     border-radius: 50%;
 }
+/* Media Queries for Mobile Support */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .header_text {
+    font-size: 28px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
